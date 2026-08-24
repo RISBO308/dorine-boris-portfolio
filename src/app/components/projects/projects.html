@@ -1,0 +1,29 @@
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    <h2>Projets</h2>
+    <div class="projects-grid">
+      @for (project of projects(); track project.title) {
+        <article class="project-card">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title" loading="lazy" (error)="$event.target.style.display='none'" />
+          </div>
+          <div class="project-content">
+            <h3>{{ project.title }}</h3>
+            <p class="tagline"><em>{{ project.tagline }}</em></p>
+            <p class="problem">{{ project.problem }}</p>
+            <p class="solution">{{ project.solution }}</p>
+            <div class="project-techs">
+              @for (tech of project.techs; track tech) {
+                <span class="skill-badge">{{ tech }}</span>
+              }
+            </div>
+            <div class="project-links">
+              <a [href]="project.demoUrl" target="_blank" rel="noopener" class="project-link project-link-demo">Voir la démo</a>
+              <a [href]="project.githubUrl" target="_blank" rel="noopener" class="project-link project-link-github">Code source</a>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

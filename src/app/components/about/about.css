@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.about-section {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.about-container {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-container h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-container p {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--color-text);
+  margin: 0;
+  opacity: 0.95;
+}
