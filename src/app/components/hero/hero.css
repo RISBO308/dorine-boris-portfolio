@@ -110,6 +110,22 @@
   color: var(--color-bg);
 }
 
+.btn-cv {
+  background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  gap: 0.5rem;
+}
+
+.btn-cv:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.cv-icon {
+  font-size: 1.1rem;
+}
+
 .hero-visual {
   flex: 1;
   display: flex;

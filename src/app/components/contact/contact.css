@@ -177,6 +177,36 @@
 .contact-form .btn {
   align-self: flex-start;
   margin-top: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(47, 143, 91, 0.25);
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+  box-shadow: 0 6px 16px rgba(47, 143, 91, 0.35);
+  transform: translateY(-2px);
+}
+
+.contact-form .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(47, 143, 91, 0.2);
+}
+
+.contact-form .btn:disabled {
+  background-color: color-mix(in srgb, var(--color-primary) 40%, gray);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
 }
 
 .form-success-message {

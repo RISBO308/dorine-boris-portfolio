@@ -11,9 +11,9 @@
 }
 
 .about-container {
-  max-width: 640px;
+  max-width: 1000px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .about-container h2 {

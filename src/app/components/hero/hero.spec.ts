@@ -34,17 +34,17 @@ describe('Hero', () => {
     );
   });
 
-  it('should have anchor links to #projects and #contact with exact labels', () => {
+  it('should have anchor links to #contact and CV download with exact labels', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const projectBtn = compiled.querySelector('a[href="#projects"]');
     const contactBtn = compiled.querySelector('a[href="#contact"]');
-
-    expect(projectBtn).toBeTruthy();
-    expect(projectBtn?.textContent?.trim()).toBe('Voir mes projets');
+    const cvBtn = compiled.querySelector('a[href="/CV DORINE BORIS DEV ANGULAR.pdf"]');
 
     expect(contactBtn).toBeTruthy();
     expect(contactBtn?.textContent?.trim()).toBe('Me contacter');
+
+    expect(cvBtn).toBeTruthy();
+    expect(cvBtn?.textContent?.trim()).toContain('Télécharger mon CV');
   });
 
   it('should render the profile image illustration', () => {
