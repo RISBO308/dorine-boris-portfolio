@@ -121,7 +121,23 @@
 
 .hero-illustration {
   width: 100%;
-  height: auto;
-  max-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo {
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
   display: block;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 12px 32px rgba(47, 143, 91, 0.25);
+}
+
+@media (max-width: 640px) {
+  .hero-photo {
+    width: 180px;
+  }
 }

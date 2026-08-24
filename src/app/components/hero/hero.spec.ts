@@ -47,10 +47,11 @@ describe('Hero', () => {
     expect(contactBtn?.textContent?.trim()).toBe('Me contacter');
   });
 
-  it('should render the signature SVG illustration', () => {
+  it('should render the profile image illustration', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const svg = compiled.querySelector('svg.hero-illustration');
-    expect(svg).toBeTruthy();
+    const img = compiled.querySelector('img.hero-photo');
+    expect(img).toBeTruthy();
+    expect(img?.getAttribute('src')).toBe('profile-pic.png');
   });
 });
