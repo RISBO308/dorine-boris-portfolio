@@ -52,6 +52,6 @@ describe('Hero', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const img = compiled.querySelector('img.hero-photo');
     expect(img).toBeTruthy();
-    expect(img?.getAttribute('src')).toBe('profile-pic.png');
+    expect(img?.getAttribute('src')).toBe('profile-pic.webp');
   });
 });

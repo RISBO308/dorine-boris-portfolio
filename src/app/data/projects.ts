@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     techs: ['Angular 22', 'TypeScript', 'Signals', 'SSR (@angular/ssr + Express)', 'httpResource()'],
     demoUrl: 'https://pratique-jour-7-les-delices-de-doua.vercel.app/',
     githubUrl: 'https://github.com/RISBO308/pratique-jour-7-Les-Delices-De-Douala',
-    image: '/les délices de douala.webp',
+    image: '/les-delices-douala.webp',
   },
   // Recommandation visuelle : capture d'une fiche produit avec la description dépliée et le badge panier visible
   {
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     techs: ['Angular 22', 'TypeScript', 'Signals', 'Angular Router', 'SSR (@angular/ssr + Express)'],
     demoUrl: 'https://shop-app-psi-two.vercel.app/',
     githubUrl: 'https://github.com/RISBO308/shop-app',
-    image: '/ice box.webp',
+    image: '/ice-box.webp',
   },
   // Recommandation visuelle : capture du Hero (bannière d'accroche) en pleine largeur
   {
