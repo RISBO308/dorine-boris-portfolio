@@ -23,19 +23,6 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/RISBO308/pratique-jour-7-Les-Delices-De-Douala',
     image: '/les-delices-douala.webp',
   },
-  // Recommandation visuelle : capture d'une fiche produit avec la description dépliée et le badge panier visible
-  {
-    title: 'ICE BOX',
-    tagline: 'Une boutique de montres en ligne, simple et efficace.',
-    problem:
-      "Offrir un parcours d'achat de montres en ligne simple, de la découverte du catalogue à la sélection du produit.",
-    solution:
-      "Une boutique e-commerce aux fiches produits interactives, avec gestion de panier réactive et navigation fluide.",
-    techs: ['Angular 22', 'TypeScript', 'Signals', 'Angular Router', 'SSR (@angular/ssr + Express)'],
-    demoUrl: 'https://shop-app-psi-two.vercel.app/',
-    githubUrl: 'https://github.com/RISBO308/shop-app',
-    image: '/ice-box.webp',
-  },
   // Recommandation visuelle : capture du Hero (bannière d'accroche) en pleine largeur
   {
     title: 'Le Calao Doré',
@@ -60,6 +47,19 @@ export const PROJECTS: Project[] = [
     techs: ['Angular 21', 'TypeScript', 'Signals', 'SSR (@angular/ssr + Express)', 'Axios', 'Chart.js', 'Bootstrap'],
     demoUrl: 'https://bilanko-frontend.vercel.app/',
     githubUrl: 'https://github.com/Bilanko-Angular/bilanko-frontend',
-    image: '/bilanko.webp',
+    image: '/image bilanko.webp',
+  },
+  // Recommandation visuelle : capture d'une fiche produit avec la description dépliée et le badge panier visible
+  {
+    title: 'ICE BOX',
+    tagline: 'Une boutique de montres en ligne, simple et efficace.',
+    problem:
+      "Offrir un parcours d'achat de montres en ligne simple, de la découverte du catalogue à la sélection du produit.",
+    solution:
+      "Une boutique e-commerce aux fiches produits interactives, avec gestion de panier réactive et navigation fluide.",
+    techs: ['Angular 22', 'TypeScript', 'Signals', 'Angular Router', 'SSR (@angular/ssr + Express)'],
+    demoUrl: 'https://shop-app-psi-two.vercel.app/',
+    githubUrl: 'https://github.com/RISBO308/shop-app',
+    image: '/ice-box.webp',
   },
 ];

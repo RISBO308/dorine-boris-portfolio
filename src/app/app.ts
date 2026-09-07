@@ -6,9 +6,10 @@ import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
+import { Parcours } from './components/parcours/parcours';
 
 @Component({
-  imports: [Header, Hero, About, Skills, Projects, Contact, Footer],
+  imports: [Header, Hero, About, Skills, Projects, Parcours, Contact, Footer],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

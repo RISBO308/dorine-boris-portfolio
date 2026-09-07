@@ -105,8 +105,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 5.75rem;
+  height: 5.75rem;
+  object-fit: contain;
   border-radius: 0.5rem;
   background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
   border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);

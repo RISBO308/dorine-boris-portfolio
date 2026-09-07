@@ -1,0 +1,23 @@
+<section id="parcours" class="parcours-section">
+  <div class="parcours-container">
+    <div class="parcours-header">
+      <h2 class="parcours-title">Parcours</h2>
+      <p class="parcours-subtitle">Un parcours multidisciplinaire, de l'agronomie au développement web.</p>
+    </div>
+
+    <div class="timeline" aria-label="Parcours professionnel et académique">
+      @for (entry of entries; track entry) {
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p>{{ entry }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="parcours-actions">
+      <a [href]="cvUrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Consulter mon CV complet →</a>
+    </div>
+  </div>
+</section>
