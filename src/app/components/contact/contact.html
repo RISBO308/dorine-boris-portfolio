@@ -78,7 +78,25 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              [ngModel]="website()"
+              (ngModelChange)="website.set($event)"
+              class="honeypot-field"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
+            @if (error()) {
+              <p class="form-error-message" role="alert">{{ error() }}</p>
+            }
+
+            <button type="submit" class="btn btn-primary" [disabled]="sending()">
+              {{ sending() ? 'Envoi en cours...' : 'Envoyer le message' }}
+            </button>
           </form>
         }
       </div>
