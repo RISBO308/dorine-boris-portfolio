@@ -41,12 +41,12 @@ async function sendBrevoEmail(apiKey, payload) {
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ message: 'Method Not Allowed' });
+    return res.status(405).json({ error: 'Méthode non autorisée' });
   }
 
   const body = getBody(req);
   if (body.website) {
-    return res.status(200).json({ message: 'Message received' });
+    return res.status(200).json({ ok: true });
   }
 
   const name = typeof body.name === 'string' ? body.name.trim() : '';
@@ -54,7 +54,7 @@ async function handler(req, res) {
   const message = typeof body.message === 'string' ? body.message.trim() : '';
 
   if (!name || !email || !message) {
-    return res.status(400).json({ message: 'Name, email and message are required' });
+    return res.status(400).json({ error: 'Champs manquants' });
   }
 
   const apiKey = process.env.BREVO_API_KEY;
@@ -63,7 +63,7 @@ async function handler(req, res) {
 
   if (!apiKey || !senderEmail || !ownerEmail) {
     console.error('Missing Brevo environment configuration');
-    return res.status(500).json({ message: 'Unable to send message' });
+    return res.status(500).json({ error: 'Envoi impossible' });
   }
 
   const safeName = escapeHtml(name);
@@ -87,10 +87,10 @@ async function handler(req, res) {
       }),
     ]);
 
-    return res.status(200).json({ message: 'Message sent' });
-  } catch (error) {
-    console.error('Brevo contact submission failed', error);
-    return res.status(500).json({ message: 'Unable to send message' });
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error(e);
+    return res.status(500).json({ error: 'Envoi impossible' });
   }
 }
 
