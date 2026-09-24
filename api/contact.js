@@ -63,7 +63,7 @@ async function handler(req, res) {
 
   if (!apiKey || !senderEmail || !ownerEmail) {
     console.error('Missing Brevo environment configuration');
-    return res.status(500).json({ error: 'Envoi impossible' });
+    return res.status(500).json({ error: 'Envoi impossible', debug: 'ENV_MISSING' });
   }
 
   const safeName = escapeHtml(name);
@@ -90,7 +90,7 @@ async function handler(req, res) {
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Envoi impossible' });
+    return res.status(500).json({ error: 'Envoi impossible', debug: e.message });
   }
 }
 
