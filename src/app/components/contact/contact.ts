@@ -19,6 +19,10 @@ export class Contact {
   private readonly contactService = inject(ContactService);
 
   onSubmit(): void {
+    if (this.website().trim()) {
+      return;
+    }
+
     if (!this.name().trim() || !this.email().trim() || !this.message().trim() || this.sending()) {
       return;
     }
@@ -29,16 +33,12 @@ export class Contact {
       name: this.name().trim(),
       email: this.email().trim(),
       message: this.message().trim(),
-      website: this.website(),
-    }).subscribe({
-      next: () => {
-        this.submitted.set(true);
-        this.sending.set(false);
-      },
-      error: () => {
-        this.error.set('Une erreur est survenue. Veuillez réessayer plus tard.');
-        this.sending.set(false);
-      },
+    }).then(() => {
+      this.submitted.set(true);
+      this.sending.set(false);
+    }).catch(() => {
+      this.error.set('Une erreur est survenue. Veuillez réessayer plus tard.');
+      this.sending.set(false);
     });
   }
 
